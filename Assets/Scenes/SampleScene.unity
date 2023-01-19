@@ -336,15 +336,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5801887, g: 0.6084324, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 06f5327c8a8659b44aa589fd6c0f6660, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.1
 --- !u!222 &25882131
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2850,7 +2850,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 457.4094, y: 375}
-  m_SizeDelta: {x: 700, y: 100}
+  m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &370200072
 MonoBehaviour:
@@ -2899,8 +2899,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 85
-  m_fontSizeBase: 85
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4041,11 +4041,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6997307695029324061, guid: 9c8dd74285ea23d41af81c439bcdc8cc, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -5879002931522168034, guid: 9c8dd74285ea23d41af81c439bcdc8cc, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -4988410788789088219, guid: 9c8dd74285ea23d41af81c439bcdc8cc, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4057,7 +4057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4068049766543414904, guid: 9c8dd74285ea23d41af81c439bcdc8cc, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -2056897363247407593, guid: 9c8dd74285ea23d41af81c439bcdc8cc, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4069,7 +4069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1342683242459039274, guid: 9c8dd74285ea23d41af81c439bcdc8cc, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9c8dd74285ea23d41af81c439bcdc8cc, type: 3}
       propertyPath: m_Name
@@ -4089,11 +4089,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1648507002671694102, guid: 9c8dd74285ea23d41af81c439bcdc8cc, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3872249193253866814, guid: 9c8dd74285ea23d41af81c439bcdc8cc, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4862143231432277229, guid: 9c8dd74285ea23d41af81c439bcdc8cc, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4427,7 +4427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8361503497837164592, guid: b82d92eaa77de564db719f1b6ce3a865, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8183555961729514771, guid: b82d92eaa77de564db719f1b6ce3a865, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4443,11 +4443,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2482427851286111746, guid: b82d92eaa77de564db719f1b6ce3a865, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -1235632687303987274, guid: b82d92eaa77de564db719f1b6ce3a865, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -665589147854140832, guid: b82d92eaa77de564db719f1b6ce3a865, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4475,7 +4475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2311307697256559326, guid: b82d92eaa77de564db719f1b6ce3a865, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3317540418114202698, guid: b82d92eaa77de564db719f1b6ce3a865, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4487,11 +4487,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4871328221955996329, guid: b82d92eaa77de564db719f1b6ce3a865, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8141494531181951311, guid: b82d92eaa77de564db719f1b6ce3a865, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8564885725250786760, guid: b82d92eaa77de564db719f1b6ce3a865, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5616,7 +5616,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 457.4094, y: 281.96042}
-  m_SizeDelta: {x: 700, y: 700}
+  m_SizeDelta: {x: 500, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &629772271
 MonoBehaviour:
@@ -5631,15 +5631,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.9019608}
+  m_Color: {r: 0.40988785, g: 0.5754717, b: 0.5122148, a: 0.9019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2d7d34242bb238342b5090606321941d, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5647,7 +5647,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 0.1
 --- !u!222 &629772272
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16142,11 +16142,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6010428628223529988, guid: c0de66b4f45609a429405629599bd35e, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -4681864147126316500, guid: c0de66b4f45609a429405629599bd35e, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -4490912045733108055, guid: c0de66b4f45609a429405629599bd35e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16154,7 +16154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4484340332078400080, guid: c0de66b4f45609a429405629599bd35e, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -4081625926799939990, guid: c0de66b4f45609a429405629599bd35e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16190,7 +16190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2856386912100728820, guid: c0de66b4f45609a429405629599bd35e, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5234325430565013302, guid: c0de66b4f45609a429405629599bd35e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16198,11 +16198,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5339426032598570558, guid: c0de66b4f45609a429405629599bd35e, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7215067853573324714, guid: c0de66b4f45609a429405629599bd35e, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8973983351558005259, guid: c0de66b4f45609a429405629599bd35e, type: 3}
       propertyPath: m_StaticEditorFlags
