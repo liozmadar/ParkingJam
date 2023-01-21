@@ -46,7 +46,7 @@ public class Car : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*MoveCarForward();
+        MoveCarForward();
         MoveCarBackward();
 
         CarHitAnObjectFromFront();
@@ -62,7 +62,7 @@ public class Car : MonoBehaviour
                 exclamationTimer = 0.5f;
                 exclamation.SetActive(false);
             }
-        }*/
+        }
         FollowRoadPathPoints();
     }
     void CarHitAnObjectFromFront()

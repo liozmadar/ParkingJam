@@ -31,12 +31,15 @@ public class MiddleCarCollision : MonoBehaviour
             car.carCanDrive = false;
 
             car.anim.enabled = false;
+            //till here good
             if (mouseTutorial != null)
             {
-            mouseTutorial.SetActive(false);
+                mouseTutorial.SetActive(false);
             }
-            car.carGoHomePath.enabled = true;
+            //
+            //  car.carGoHomePath.enabled = true;
             touchCars.firstCarTutorial = false;
+            car.moveTheCar = true;
             //untagged because if i click on one car and then release on another car , cause a bug . (because the cars not in the same tag)
             car.gameObject.tag = "Untagged";
         }
