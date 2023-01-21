@@ -7,26 +7,35 @@ using TMPro;
 public class TouchCars : MonoBehaviour
 {
     //The raycast 
+    [Header("The raycast")]
     public RaycastHit hitInfo;
+
     //The Cars script
+    [Header("Get script component")]
     public Car car;
+
     //Check if i already click on any car , so i cant move the other cars
+    [Header("Check car touching")]
     public bool alreadyClicked;
+    public bool cantTouchTheCar = true;
+    public bool firstCarTutorial = true;
+
     //Cars speed
+    [Header("Cars speed")]
     public float speed;
+
     //Array of all the cars and finish line
+    [Header("Finish line")]
     public GameObject[] carsFinished;
     public int howManyCarsFinished;
     public GameObject canvasFinishGame;
     public TextMeshProUGUI finishText;
     private bool stopFinishTextSize = true;
+
     //mouse input position
-    private float x1;
-    private float x2;
-
-    public bool cantTouchTheCar = true;
-    public bool firstCarTutorial = true;
-
+    [Header("Mouse position")]
+    private float mousePositionStartX;
+    private float mousePositionEndX;
 
     // Start is called before the first frame update
     void Start()
@@ -55,7 +64,7 @@ public class TouchCars : MonoBehaviour
                             var carScript = hitInfo.collider.GetComponent<Car>();
                             car = carScript;
 
-                            x1 = Input.mousePosition.x;
+                            mousePositionStartX = Input.mousePosition.x;
                         }
                     }
                 }
@@ -64,13 +73,13 @@ public class TouchCars : MonoBehaviour
             {
                 if (hitInfo.transform.gameObject.tag == "FirstCarTutorial" && firstCarTutorial)
                 {
-                    x2 = Input.mousePosition.x;
-                    if (x1 > x2)
+                    mousePositionEndX = Input.mousePosition.x;
+                    if (mousePositionStartX > mousePositionEndX)
                     {
                         car.carCanDrive = true;
                         alreadyClicked = true;
                     }
-                    else if (x1 < x2)
+                    else if (mousePositionStartX < mousePositionEndX)
                     {
                         car.carCanDriveBackward = true;
                         alreadyClicked = true;
@@ -79,13 +88,13 @@ public class TouchCars : MonoBehaviour
                 }
                 else if (hitInfo.transform.gameObject.tag == "Car" && !firstCarTutorial)
                 {
-                    x2 = Input.mousePosition.x;
-                    if (x1 > x2)
+                    mousePositionEndX = Input.mousePosition.x;
+                    if (mousePositionStartX > mousePositionEndX)
                     {
                         car.carCanDrive = true;
                         alreadyClicked = true;
                     }
-                    else if (x1 < x2)
+                    else if (mousePositionStartX < mousePositionEndX)
                     {
                         car.carCanDriveBackward = true;
                         alreadyClicked = true;
@@ -93,13 +102,13 @@ public class TouchCars : MonoBehaviour
                 }
                 else if (hitInfo.transform.gameObject.tag == "CarRight" && !firstCarTutorial)
                 {
-                    x2 = Input.mousePosition.x;
-                    if (x1 < x2)
+                    mousePositionEndX = Input.mousePosition.x;
+                    if (mousePositionStartX < mousePositionEndX)
                     {
                         car.carCanDrive = true;
                         alreadyClicked = true;
                     }
-                    else if (x1 > x2)
+                    else if (mousePositionStartX > mousePositionEndX)
                     {
                         car.carCanDriveBackward = true;
                         alreadyClicked = true;
@@ -110,8 +119,10 @@ public class TouchCars : MonoBehaviour
     }
     void CarsFinished()
     {
+        //check if all the cars are get to the finish line
         if (howManyCarsFinished == carsFinished.Length)
         {
+            //end game card
             if (stopFinishTextSize)
             {
                 canvasFinishGame.SetActive(true);

@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class MiddleCarCollision : MonoBehaviour
 {
+    //get the scripts components
+    [Header("Get scripts components")]
     public Car car;
     public TouchCars touchCars;
-
     public GameObject mouseTutorial;
 
-    //
+    [Header("Check the nearest RoadPath position")]
     public List<float> allPointsDistance;
     public bool checkAllPointsDistanceBool;
     public int index;

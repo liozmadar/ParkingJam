@@ -6,7 +6,6 @@ using UnityEngine.Animations;
 
 public class Car : MonoBehaviour
 {
-
     [Header("Get the component")]
     public TouchCars touchCars;
     public Animator anim;
@@ -39,7 +38,6 @@ public class Car : MonoBehaviour
     [Header("Road path points")]
     public float carPointsSpeed;
     public bool moveTheCar;
-
 
     // Start is called before the first frame update
     void Start()
