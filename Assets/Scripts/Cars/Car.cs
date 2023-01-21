@@ -6,44 +6,45 @@ using UnityEngine.Animations;
 
 public class Car : MonoBehaviour
 {
+
+    [Header("Get the component")]
     public TouchCars touchCars;
     public Animator anim;
-    //car car go home
-    public CarGoHomePath carGoHomePath;
-    public GameObject carsGoHomePoint;
-    public bool carCanNowGoToHomePoint;
-    //check the car hits
+    public MiddleCarCollision middleCarCollision;
+
+    [Header("Check if the cars get hit from front/back")]
     private bool CarHitObjectFromFront;
     private bool CarHitObjectFromBack;
-    //allow the car to move
+
+    [Header("Allow the cars to move")]
     public bool carCanDrive;
     public bool carCanDriveBackward;
-    //partical system from getting hit
-    private ParticleSystem carhitSparkFront;
+
+    [Header("ParticleSystem")]
+    public ParticleSystem carhitSparkFront;
     public ParticleSystem carhitSparkBack;
-    //emote 
+
+    [Header("Emotes")]
     public GameObject exclamation;
     private bool exclamationBool;
     private bool exclamationTheCollisionCar = true;
     private float exclamationTimer = 0.5f;
-    //emote display
+
+    [Header("Emotes images")]
     public SpriteRenderer SP;
     public Sprite emote1;
     public Sprite emote2;
     public Sprite emote3;
-    //tring to make a roadPathPoints
-    public int nextPoint;
+
+    [Header("Road path points")]
     public float carPointsSpeed;
     public bool moveTheCar;
 
-    public MiddleCarCollision middleCarCollision;
 
     // Start is called before the first frame update
     void Start()
     {
-        carhitSparkFront = GetComponentInChildren<ParticleSystem>(carhitSparkFront);
         anim = GetComponent<Animator>();
-        carGoHomePath = GetComponent<CarGoHomePath>();
     }
     // Update is called once per frame
     void Update()
@@ -167,10 +168,10 @@ public class Car : MonoBehaviour
                 transform.position = Vector3.MoveTowards(transform.position, RoadPathFollow.instance.roadPathPoints[middleCarCollision.index].transform.position, carPointsSpeed);
                 transform.LookAt(RoadPathFollow.instance.roadPathPoints[middleCarCollision.index].transform.position);
 
-               /* if (transform.position == RoadPathFollow.instance.roadPathPoints[nextPoint].transform.position)
-                {
-                    nextPoint++;
-                }*/
+                /* if (transform.position == RoadPathFollow.instance.roadPathPoints[nextPoint].transform.position)
+                 {
+                     nextPoint++;
+                 }*/
 
                 if (Vector3.Distance(transform.position, RoadPathFollow.instance.roadPathPoints[middleCarCollision.index].transform.position) <= 0.1f)
                 {
