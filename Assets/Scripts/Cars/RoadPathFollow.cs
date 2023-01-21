@@ -18,8 +18,4 @@ public class RoadPathFollow : MonoBehaviour
     {
 
     }
-    void MoveToNextRoadPathPoints()
-    {
-        
-    }
 }

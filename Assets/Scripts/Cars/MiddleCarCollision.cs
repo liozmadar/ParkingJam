@@ -31,22 +31,12 @@ public class MiddleCarCollision : MonoBehaviour
             checkAllPointsDistanceBool = false;
         }
     }
-    void GetIndex()
-    {
-
-    }
     void CheckTheDistanceBetweenAllRoadPoints()
     {
         for (int i = 0; i < RoadPathFollow.instance.roadPathPoints.Length; i++)
         {
             float dist = Vector3.Distance(RoadPathFollow.instance.roadPathPoints[i].transform.position, transform.position);
             allPointsDistance.Add(dist);
-
-
-            if (i == RoadPathFollow.instance.roadPathPoints.Length)
-            {
-                Debug.Log("heyyy");
-            }
         }
 
         index = allPointsDistance.IndexOf(Mathf.Min(allPointsDistance.ToArray()));
