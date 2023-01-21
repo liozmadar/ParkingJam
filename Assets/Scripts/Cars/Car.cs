@@ -36,6 +36,8 @@ public class Car : MonoBehaviour
     public float carPointsSpeed;
     public bool moveTheCar;
 
+    public MiddleCarCollision middleCarCollision;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -160,14 +162,19 @@ public class Car : MonoBehaviour
     {
         if (moveTheCar)
         {
-            if (nextPoint < RoadPathFollow.instance.roadPathPoints.Length)
+            if (middleCarCollision.index < RoadPathFollow.instance.roadPathPoints.Length)
             {
-                transform.position = Vector3.MoveTowards(transform.position, RoadPathFollow.instance.roadPathPoints[nextPoint].transform.position, carPointsSpeed);
-                transform.LookAt(RoadPathFollow.instance.roadPathPoints[nextPoint].transform.position);
+                transform.position = Vector3.MoveTowards(transform.position, RoadPathFollow.instance.roadPathPoints[middleCarCollision.index].transform.position, carPointsSpeed);
+                transform.LookAt(RoadPathFollow.instance.roadPathPoints[middleCarCollision.index].transform.position);
 
-                if (transform.position == RoadPathFollow.instance.roadPathPoints[nextPoint].transform.position)
+               /* if (transform.position == RoadPathFollow.instance.roadPathPoints[nextPoint].transform.position)
                 {
                     nextPoint++;
+                }*/
+
+                if (Vector3.Distance(transform.position, RoadPathFollow.instance.roadPathPoints[middleCarCollision.index].transform.position) <= 0.1f)
+                {
+                    middleCarCollision.index++;
                 }
             }
         }

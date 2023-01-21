@@ -9,6 +9,11 @@ public class MiddleCarCollision : MonoBehaviour
 
     public GameObject mouseTutorial;
 
+    //
+    public List<float> allPointsDistance;
+    public bool checkAllPointsDistanceBool;
+    public int index;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +24,32 @@ public class MiddleCarCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (checkAllPointsDistanceBool)
+        {
+            CheckTheDistanceBetweenAllRoadPoints();
+            checkAllPointsDistanceBool = false;
+        }
+    }
+    void GetIndex()
+    {
 
+    }
+    void CheckTheDistanceBetweenAllRoadPoints()
+    {
+        for (int i = 0; i < RoadPathFollow.instance.roadPathPoints.Length; i++)
+        {
+            float dist = Vector3.Distance(RoadPathFollow.instance.roadPathPoints[i].transform.position, transform.position);
+            allPointsDistance.Add(dist);
+
+
+            if (i == RoadPathFollow.instance.roadPathPoints.Length)
+            {
+                Debug.Log("heyyy");
+            }
+        }
+
+        index = allPointsDistance.IndexOf(Mathf.Min(allPointsDistance.ToArray()));
+        Debug.Log(index);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -39,7 +69,9 @@ public class MiddleCarCollision : MonoBehaviour
             //
             //  car.carGoHomePath.enabled = true;
             touchCars.firstCarTutorial = false;
+
             car.moveTheCar = true;
+            checkAllPointsDistanceBool = true;
             //untagged because if i click on one car and then release on another car , cause a bug . (because the cars not in the same tag)
             car.gameObject.tag = "Untagged";
         }
