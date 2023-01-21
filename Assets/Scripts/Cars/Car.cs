@@ -31,7 +31,10 @@ public class Car : MonoBehaviour
     public Sprite emote1;
     public Sprite emote2;
     public Sprite emote3;
-
+    //tring to make a roadPathPoints
+    public int nextPoint;
+    public float carPointsSpeed;
+    public bool moveTheCar;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +46,7 @@ public class Car : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveCarForward();
+        /*MoveCarForward();
         MoveCarBackward();
 
         CarHitAnObjectFromFront();
@@ -59,7 +62,8 @@ public class Car : MonoBehaviour
                 exclamationTimer = 0.5f;
                 exclamation.SetActive(false);
             }
-        }
+        }*/
+        FollowRoadPathPoints();
     }
     void CarHitAnObjectFromFront()
     {
@@ -141,7 +145,7 @@ public class Car : MonoBehaviour
             {
                 exclamationTheCollisionCar = true;
             }
-        }     
+        }
     }
     void CarHitObjectFromFrontStop()
     {
@@ -150,5 +154,22 @@ public class Car : MonoBehaviour
     void CarHitObjectFromBackStop()
     {
         CarHitObjectFromBack = false;
+    }
+    //find the next point position to go to
+    void FollowRoadPathPoints()
+    {
+        if (moveTheCar)
+        {
+            if (nextPoint < RoadPathFollow.instance.roadPathPoints.Length)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, RoadPathFollow.instance.roadPathPoints[nextPoint].transform.position, carPointsSpeed);
+                transform.LookAt(RoadPathFollow.instance.roadPathPoints[nextPoint].transform.position);
+
+                if (transform.position == RoadPathFollow.instance.roadPathPoints[nextPoint].transform.position)
+                {
+                    nextPoint++;
+                }
+            }
+        }
     }
 }
