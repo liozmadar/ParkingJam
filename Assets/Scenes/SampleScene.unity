@@ -4046,6 +4046,7 @@ MonoBehaviour:
   emote2: {fileID: 21300000, guid: d2a6659485b989147b60ecf3384201fd, type: 3}
   emote3: {fileID: 21300000, guid: 1562029f870c2cf488f7fc9366b54b62, type: 3}
   carPointsSpeed: 0.05
+  angleSpeed: 15
   moveTheCar: 0
 --- !u!23 &460395800
 MeshRenderer:
@@ -15594,6 +15595,7 @@ MonoBehaviour:
   emote2: {fileID: 21300000, guid: d2a6659485b989147b60ecf3384201fd, type: 3}
   emote3: {fileID: 21300000, guid: 1562029f870c2cf488f7fc9366b54b62, type: 3}
   carPointsSpeed: 0.05
+  angleSpeed: 15
   moveTheCar: 0
 --- !u!95 &1869160290
 Animator:
@@ -16544,6 +16546,7 @@ MonoBehaviour:
   emote2: {fileID: 21300000, guid: d2a6659485b989147b60ecf3384201fd, type: 3}
   emote3: {fileID: 21300000, guid: 1562029f870c2cf488f7fc9366b54b62, type: 3}
   carPointsSpeed: 0.05
+  angleSpeed: 15
   moveTheCar: 0
 --- !u!95 &1938708192
 Animator:

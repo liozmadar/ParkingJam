@@ -37,6 +37,7 @@ public class Car : MonoBehaviour
 
     [Header("Road path points")]
     public float carPointsSpeed;
+    public float angleSpeed = 10;
     public bool moveTheCar;
 
     // Start is called before the first frame update
@@ -164,12 +165,17 @@ public class Car : MonoBehaviour
             if (middleCarCollision.index < RoadPathFollow.instance.roadPathPoints.Length)
             {
                 transform.position = Vector3.MoveTowards(transform.position, RoadPathFollow.instance.roadPathPoints[middleCarCollision.index].transform.position, carPointsSpeed);
-                transform.LookAt(RoadPathFollow.instance.roadPathPoints[middleCarCollision.index].transform.position);
+             //   transform.LookAt(RoadPathFollow.instance.roadPathPoints[middleCarCollision.index].transform.position);
 
                 if (Vector3.Distance(transform.position, RoadPathFollow.instance.roadPathPoints[middleCarCollision.index].transform.position) <= 0.1f)
                 {
                     middleCarCollision.index++;
                 }
+
+                var targetRotation = Quaternion.LookRotation(RoadPathFollow.instance.roadPathPoints[middleCarCollision.index].transform.position - transform.position);
+
+                // Smoothly rotate towards the target point.
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, angleSpeed * Time.deltaTime);
             }
         }
     }
