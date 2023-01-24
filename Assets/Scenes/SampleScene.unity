@@ -4045,7 +4045,7 @@ MonoBehaviour:
   emote1: {fileID: 21300000, guid: 5b61e810929179240be5769d06c552d9, type: 3}
   emote2: {fileID: 21300000, guid: d2a6659485b989147b60ecf3384201fd, type: 3}
   emote3: {fileID: 21300000, guid: 1562029f870c2cf488f7fc9366b54b62, type: 3}
-  carPointsSpeed: 0.08
+  carPointsSpeed: 0.06
   angleSpeed: 15
   moveTheCar: 0
 --- !u!23 &460395800
@@ -15808,7 +15808,7 @@ MonoBehaviour:
   emote1: {fileID: 21300000, guid: 5b61e810929179240be5769d06c552d9, type: 3}
   emote2: {fileID: 21300000, guid: d2a6659485b989147b60ecf3384201fd, type: 3}
   emote3: {fileID: 21300000, guid: 1562029f870c2cf488f7fc9366b54b62, type: 3}
-  carPointsSpeed: 0.08
+  carPointsSpeed: 0.06
   angleSpeed: 15
   moveTheCar: 0
 --- !u!95 &1869160290
@@ -16759,7 +16759,7 @@ MonoBehaviour:
   emote1: {fileID: 21300000, guid: 5b61e810929179240be5769d06c552d9, type: 3}
   emote2: {fileID: 21300000, guid: d2a6659485b989147b60ecf3384201fd, type: 3}
   emote3: {fileID: 21300000, guid: 1562029f870c2cf488f7fc9366b54b62, type: 3}
-  carPointsSpeed: 0.08
+  carPointsSpeed: 0.06
   angleSpeed: 15
   moveTheCar: 0
 --- !u!95 &1938708192
