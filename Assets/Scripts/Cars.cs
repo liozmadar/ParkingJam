@@ -15,13 +15,24 @@ public class Cars : MonoBehaviour
 
     [Header("Check the nearest RoadPath position")]
     public List<float> allPointsDistance;
-   // public bool checkAllPointsDistanceBool;
     public int index;
 
     [Header("Road path points")]
     public float carPointsSpeed;
     public float angleSpeed = 10;
     public bool moveTheCar;
+
+    [Header("Emotes")]
+    public GameObject exclamation;
+    private bool exclamationBool;
+    private bool exclamationTheCollisionCar = true;
+    private float exclamationTimer = 0.5f;
+
+    [Header("Emotes images")]
+    public SpriteRenderer SP;
+    public Sprite emote1;
+    public Sprite emote2;
+    public Sprite emote3;
 
     // Start is called before the first frame update
     void Start()
@@ -36,12 +47,25 @@ public class Cars : MonoBehaviour
         MoveCarsBackword();
 
         FollowRoadPathPoints();
+
+        if (exclamationBool)
+        {
+            exclamation.SetActive(true);
+            exclamationTimer -= Time.deltaTime;
+            if (exclamationTimer < 0)
+            {
+                exclamationBool = false;
+                exclamationTimer = 0.5f;
+                exclamation.SetActive(false);
+            }
+        }
     }
     void MoveCarsForward()
     {
         if (carCanDrive)
         {
             transform.position += transform.forward * speed * Time.deltaTime;
+            exclamationTheCollisionCar = false;
         }
     }
     void MoveCarsBackword()
@@ -49,6 +73,7 @@ public class Cars : MonoBehaviour
         if (carCanDriveBackward)
         {
             transform.position -= transform.forward * speed * Time.deltaTime;
+            exclamationTheCollisionCar = false;
         }
     }
     //Road Path Follow
@@ -59,7 +84,6 @@ public class Cars : MonoBehaviour
             Debug.Log("wall road");
             carCanDrive = false;
             carCanDriveBackward = false;
-         //   checkAllPointsDistanceBool = true;
             moveTheCar = true;
 
             //Check the distance between all road points
@@ -68,7 +92,7 @@ public class Cars : MonoBehaviour
                 float dist = Vector3.Distance(RoadPathFollow.instance.roadPathPoints[i].transform.position, transform.position);
                 allPointsDistance.Add(dist);
             }
-
+            //index is the start point for the car to start the RoadPath from
             index = allPointsDistance.IndexOf(Mathf.Min(allPointsDistance.ToArray()));
             Debug.Log(index);
             //
@@ -104,8 +128,6 @@ public class Cars : MonoBehaviour
     //Till here
 
 
-
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Car" || collision.gameObject.tag == "CarRight" || collision.gameObject.tag == "FirstCarTutorial" || collision.gameObject.tag == "ParkingObjects")
@@ -119,8 +141,29 @@ public class Cars : MonoBehaviour
                 carCanDriveBackward = false;
             }
 
-
-
+            //Emotes
+            if (exclamationTheCollisionCar)
+            {
+                exclamationBool = true;
+                float random = Random.Range(1, 4);
+                if (random == 1)
+                {
+                    SP.sprite = emote1;
+                }
+                if (random == 2)
+                {
+                    SP.sprite = emote2;
+                }
+                if (random == 3)
+                {
+                    SP.sprite = emote3;
+                }
+            }
+            else if (!exclamationTheCollisionCar)
+            {
+                exclamationTheCollisionCar = true;
+            }
+            //Till here
 
 
             /*if (carCanDrive == true)
