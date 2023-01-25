@@ -2729,14 +2729,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344901601}
-  m_LocalRotation: {x: -0.06798751, y: -0.85798204, z: -0.11775782, w: 0.49535617}
+  m_LocalRotation: {x: -0.31125727, y: -0.67775863, z: -0.53911346, w: 0.39130405}
   m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1864907470}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: -15.63, y: 60, z: 0}
+  m_LocalEulerAnglesHint: {x: -77, y: -120, z: 0}
 --- !u!212 &344901603
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14023,10 +14023,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a736c4c05d5423f4c9e5208caf5c922d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rayManager: {fileID: 0}
   carCanDrive: 0
   carCanDriveBackward: 0
   speed: 10
-  rayManager: {fileID: 0}
   allPointsDistance: []
   index: 0
   carPointsSpeed: 0.05
@@ -16232,10 +16232,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a736c4c05d5423f4c9e5208caf5c922d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rayManager: {fileID: 0}
   carCanDrive: 0
   carCanDriveBackward: 0
   speed: 10
-  rayManager: {fileID: 0}
   allPointsDistance: []
   index: 0
   carPointsSpeed: 0.05
@@ -17156,10 +17156,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a736c4c05d5423f4c9e5208caf5c922d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rayManager: {fileID: 0}
   carCanDrive: 0
   carCanDriveBackward: 0
   speed: 10
-  rayManager: {fileID: 0}
   allPointsDistance: []
   index: 0
   carPointsSpeed: 0.05

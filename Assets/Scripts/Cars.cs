@@ -71,6 +71,7 @@ public class Cars : MonoBehaviour
                 exclamation.SetActive(false);
             }
         }
+        exclamation.transform.LookAt(Camera.main.transform.position);
     }
 
     //Push the cars back a little after they hit an object
