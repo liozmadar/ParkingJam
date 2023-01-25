@@ -6282,7 +6282,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693120841}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -8451,7 +8451,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970524717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.11, y: -2.5, z: 1}
+  m_LocalPosition: {x: -4.11, y: -2.5, z: 1.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8478,7 +8478,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970524717}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -10043,7 +10043,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144582226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: -2.5, z: -0.75}
+  m_LocalPosition: {x: -0.1, y: -2.5, z: -0.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10070,7 +10070,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144582226}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -11858,7 +11858,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323195607}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -12526,7 +12526,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424102457}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -13706,7 +13706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13745,6 +13745,10 @@ PrefabInstance:
       value: car-hatchback-violet (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_TagString
       value: CarRight
       objectReference: {fileID: 0}
@@ -13769,10 +13773,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carCanDrive: 0
   carCanDriveBackward: 0
-  speed: 5
+  speed: 10
   rayManager: {fileID: 0}
   allPointsDistance: []
-  checkAllPointsDistanceBool: 0
   index: 0
   carPointsSpeed: 0.05
   angleSpeed: 10
@@ -15715,7 +15718,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855586900}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -15812,7 +15815,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856706001}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -15868,11 +15871,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.997
+      value: -3.648
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15909,6 +15912,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_Name
       value: car-hatchback-violet
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_TagString
@@ -15965,10 +15972,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carCanDrive: 0
   carCanDriveBackward: 0
-  speed: 5
+  speed: 10
   rayManager: {fileID: 0}
   allPointsDistance: []
-  checkAllPointsDistanceBool: 0
   index: 0
   carPointsSpeed: 0.05
   angleSpeed: 10
@@ -16817,7 +16823,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16880,10 +16886,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carCanDrive: 0
   carCanDriveBackward: 0
-  speed: 5
+  speed: 10
   rayManager: {fileID: 0}
   allPointsDistance: []
-  checkAllPointsDistanceBool: 0
   index: 0
   carPointsSpeed: 0.05
   angleSpeed: 10
@@ -18193,7 +18198,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121120135}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

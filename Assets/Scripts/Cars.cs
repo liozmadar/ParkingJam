@@ -15,7 +15,7 @@ public class Cars : MonoBehaviour
 
     [Header("Check the nearest RoadPath position")]
     public List<float> allPointsDistance;
-    public bool checkAllPointsDistanceBool;
+   // public bool checkAllPointsDistanceBool;
     public int index;
 
     [Header("Road path points")]
@@ -36,12 +36,6 @@ public class Cars : MonoBehaviour
         MoveCarsBackword();
 
         FollowRoadPathPoints();
-
-        if (checkAllPointsDistanceBool)
-        {
-            CheckTheDistanceBetweenAllRoadPoints();
-            checkAllPointsDistanceBool = false;
-        }
     }
     void MoveCarsForward()
     {
@@ -65,25 +59,25 @@ public class Cars : MonoBehaviour
             Debug.Log("wall road");
             carCanDrive = false;
             carCanDriveBackward = false;
-            checkAllPointsDistanceBool = true;
+         //   checkAllPointsDistanceBool = true;
             moveTheCar = true;
+
+            //Check the distance between all road points
+            for (int i = 0; i < RoadPathFollow.instance.roadPathPoints.Length; i++)
+            {
+                float dist = Vector3.Distance(RoadPathFollow.instance.roadPathPoints[i].transform.position, transform.position);
+                allPointsDistance.Add(dist);
+            }
+
+            index = allPointsDistance.IndexOf(Mathf.Min(allPointsDistance.ToArray()));
+            Debug.Log(index);
+            //
         }
         if (other.gameObject.tag == "FinishLine")
         {
             rayManager.howManyCarsFinished++;
             gameObject.SetActive(false);
         }
-    }
-    void CheckTheDistanceBetweenAllRoadPoints()
-    {
-        for (int i = 0; i < RoadPathFollow.instance.roadPathPoints.Length; i++)
-        {
-            float dist = Vector3.Distance(RoadPathFollow.instance.roadPathPoints[i].transform.position, transform.position);
-            allPointsDistance.Add(dist);
-        }
-
-        index = allPointsDistance.IndexOf(Mathf.Min(allPointsDistance.ToArray()));
-        Debug.Log(index);
     }
 
     void FollowRoadPathPoints()
