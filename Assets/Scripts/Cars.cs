@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Cars : MonoBehaviour
 {
-    public bool carCanDrive;
-    public bool carCanDriveBackward;
-
-    public float speed;
-
-    //get the scripts components
     [Header("Get scripts components")]
     public RayManager rayManager;
+
+    [Header("Cars movement")]
+    public bool carCanDrive;
+    public bool carCanDriveBackward;
+    public float speed;
+
+    [Header("Check if the cars get hit from front/back")]
+    private bool CarHitObjectFromFront;
+    private bool CarHitObjectFromBack;
 
     [Header("Check the nearest RoadPath position")]
     public List<float> allPointsDistance;
@@ -43,11 +46,20 @@ public class Cars : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Push back from hits
+        CarHitAnObjectFromFront();
+        CarHitAnObjectFromBack();
+        //Cars move forward/backword
         MoveCarsForward();
         MoveCarsBackword();
-
+        //RoadPath
         FollowRoadPathPoints();
-
+        //Emotes
+        EmotesShow();
+    }
+    //Show emotes when get hit
+    void EmotesShow()
+    {
         if (exclamationBool)
         {
             exclamation.SetActive(true);
@@ -60,6 +72,33 @@ public class Cars : MonoBehaviour
             }
         }
     }
+
+    //Push the cars back a little after they hit an object
+    void CarHitAnObjectFromFront()
+    {
+        if (CarHitObjectFromFront)
+        {
+            rayManager.hitInfo.transform.position -= transform.forward * speed * Time.deltaTime;
+        }
+    }
+    void CarHitAnObjectFromBack()
+    {
+        if (CarHitObjectFromBack)
+        {
+            rayManager.hitInfo.transform.position += transform.forward * speed * Time.deltaTime;
+        }
+    }
+    void CarHitObjectFromFrontStop()
+    {
+        CarHitObjectFromFront = false;
+    }
+    void CarHitObjectFromBackStop()
+    {
+        CarHitObjectFromBack = false;
+    }
+    //Till here
+    
+    //Move the cars forward or backword
     void MoveCarsForward()
     {
         if (carCanDrive)
@@ -76,6 +115,8 @@ public class Cars : MonoBehaviour
             exclamationTheCollisionCar = false;
         }
     }
+    //Till here
+
     //Road Path Follow
     private void OnTriggerEnter(Collider other)
     {
@@ -103,7 +144,6 @@ public class Cars : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-
     void FollowRoadPathPoints()
     {
         if (moveTheCar)
@@ -127,7 +167,6 @@ public class Cars : MonoBehaviour
     }
     //Till here
 
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Car" || collision.gameObject.tag == "CarRight" || collision.gameObject.tag == "FirstCarTutorial" || collision.gameObject.tag == "ParkingObjects")
@@ -135,10 +174,14 @@ public class Cars : MonoBehaviour
             if (carCanDrive == true)
             {
                 carCanDrive = false;
+                CarHitObjectFromFront = true;
+                Invoke("CarHitObjectFromFrontStop", 0.03f);
             }
             if (carCanDriveBackward == true)
             {
                 carCanDriveBackward = false;
+                CarHitObjectFromBack = true;
+                Invoke("CarHitObjectFromBackStop", 0.03f);
             }
 
             //Emotes
@@ -164,47 +207,6 @@ public class Cars : MonoBehaviour
                 exclamationTheCollisionCar = true;
             }
             //Till here
-
-
-            /*if (carCanDrive == true)
-            {
-                carCanDrive = false;
-                CarHitObjectFromFront = true;
-                touchCars.cantTouchTheCar = true;
-                Invoke("CarHitObjectFromFrontStop", 0.03f);
-                carhitSparkFront.Play(true);
-            }
-            else if (carCanDriveBackward == true)
-            {
-                carCanDriveBackward = false;
-                CarHitObjectFromBack = true;
-                touchCars.cantTouchTheCar = true;
-                Invoke("CarHitObjectFromBackStop", 0.03f);
-                carhitSparkBack.Play(true);
-            }
-            touchCars.alreadyClicked = false;
-            anim.SetTrigger("GetHit");
-            if (exclamationTheCollisionCar)
-            {
-                exclamationBool = true;
-                float random = Random.Range(1, 4);
-                if (random == 1)
-                {
-                    SP.sprite = emote1;
-                }
-                if (random == 2)
-                {
-                    SP.sprite = emote2;
-                }
-                if (random == 3)
-                {
-                    SP.sprite = emote3;
-                }
-            }
-            else if (!exclamationTheCollisionCar)
-            {
-                exclamationTheCollisionCar = true;
-            }*/
         }
     }
 }
