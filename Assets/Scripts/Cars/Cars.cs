@@ -37,6 +37,8 @@ public class Cars : MonoBehaviour
     public Sprite emote2;
     public Sprite emote3;
 
+    private bool noMoreCollision = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -98,7 +100,7 @@ public class Cars : MonoBehaviour
         CarHitObjectFromBack = false;
     }
     //Till here
-    
+
     //Move the cars forward or backword
     void MoveCarsForward()
     {
@@ -121,23 +123,27 @@ public class Cars : MonoBehaviour
     //Road Path Follow
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "NavMeshRoad")
+        if (noMoreCollision)
         {
-            Debug.Log("wall road");
-            carCanDrive = false;
-            carCanDriveBackward = false;
-            moveTheCar = true;
-
-            //Check the distance between all road points
-            for (int i = 0; i < RoadPathFollow.instance.roadPathPoints.Length; i++)
+            if (other.gameObject.tag == "RoadPathPoint")
             {
-                float dist = Vector3.Distance(RoadPathFollow.instance.roadPathPoints[i].transform.position, transform.position);
-                allPointsDistance.Add(dist);
+                Debug.Log("wall road");
+                carCanDrive = false;
+                carCanDriveBackward = false;
+                moveTheCar = true;
+
+                //Check the distance between all road points
+                for (int i = 0; i < RoadPathFollow.instance.roadPathPoints.Length; i++)
+                {
+                    float dist = Vector3.Distance(RoadPathFollow.instance.roadPathPoints[i].transform.position, transform.position);
+                    allPointsDistance.Add(dist);
+                }
+                //index is the start point for the car to start the RoadPath from
+                index = allPointsDistance.IndexOf(Mathf.Min(allPointsDistance.ToArray()));
+                Debug.Log(index);
+                //
             }
-            //index is the start point for the car to start the RoadPath from
-            index = allPointsDistance.IndexOf(Mathf.Min(allPointsDistance.ToArray()));
-            Debug.Log(index);
-            //
+            noMoreCollision = false;
         }
         if (other.gameObject.tag == "FinishLine")
         {
