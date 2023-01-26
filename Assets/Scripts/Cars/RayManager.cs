@@ -20,15 +20,18 @@ public class RayManager : MonoBehaviour
 
     //Array of all the cars and finish line
     [Header("Finish line")]
-    public GameObject[] carsFinished;
     public int howManyCarsFinished;
+
+    public int howManyCarsInScene;
+    private GameObject[] allCarsInTheScene;
+    private GameObject[] allCarsRightInTheScene;
 
     public bool firstCarTutorial = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        CheckHowManyCarsInTheScene();
     }
 
     // Update is called once per frame
@@ -105,10 +108,18 @@ public class RayManager : MonoBehaviour
     void CarsFinished()
     {
         //check if all the cars are get to the finish line
-        if (howManyCarsFinished == carsFinished.Length)
+        if (howManyCarsFinished == howManyCarsInScene)
         {
             //end game card
-           
+            Debug.Log("finish!");
         }
+    }
+    void CheckHowManyCarsInTheScene()
+    {
+        allCarsInTheScene = GameObject.FindGameObjectsWithTag("Car");
+        allCarsRightInTheScene = GameObject.FindGameObjectsWithTag("CarRight");
+
+        howManyCarsInScene += allCarsInTheScene.Length;
+        howManyCarsInScene += allCarsRightInTheScene.Length;
     }
 }
