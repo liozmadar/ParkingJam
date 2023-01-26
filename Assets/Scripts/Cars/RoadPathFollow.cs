@@ -11,6 +11,10 @@ public class RoadPathFollow : MonoBehaviour
     void Start()
     {
         instance = this;
+
+        roadPathPoints = GameObject.FindGameObjectsWithTag("RoadPathPoint");
+
+       // Debug.Log(transform.childCount);
     }
 
     // Update is called once per frame
