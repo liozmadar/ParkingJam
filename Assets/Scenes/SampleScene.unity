@@ -4094,7 +4094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd199ff2879d4147bcbedaef299e26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touchCars: {fileID: 506506796}
+  touchCars: {fileID: 0}
   anim: {fileID: 0}
   middleCarCollision: {fileID: 740045598}
   carCanDrive: 0
@@ -4830,7 +4830,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 506506797}
-  - component: {fileID: 506506796}
   - component: {fileID: 506506798}
   m_Layer: 0
   m_Name: GameCarsManager
@@ -4839,30 +4838,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &506506796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 506506795}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c134be762a31f240b9231246ea0690f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  car: {fileID: 0}
-  alreadyClicked: 0
-  cantTouchTheCar: 1
-  firstCarTutorial: 1
-  speed: 10
-  carsFinished:
-  - {fileID: 1276497596}
-  - {fileID: 460395797}
-  - {fileID: 1869160282}
-  howManyCarsFinished: 0
-  canvasFinishGame: {fileID: 1523239157}
-  finishText: {fileID: 0}
 --- !u!4 &506506797
 Transform:
   m_ObjectHideFlags: 0
@@ -4891,8 +4866,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cars: {fileID: 0}
-  carsFinished: []
+  FinishTheStageBool: 0
   howManyCarsFinished: 0
+  howManyCarsInScene: 0
   firstCarTutorial: 1
 --- !u!1001 &523560156
 PrefabInstance:
@@ -7974,6 +7950,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b426ca625bd29a544a764fa9667e5bc7, type: 3}
   m_PrefabInstance: {fileID: 868480126}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &870781815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 870781816}
+  - component: {fileID: 870781817}
+  m_Layer: 0
+  m_Name: CanvasManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &870781816
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870781815}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2126217620}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &870781817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870781815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcdd139d81903904491efec0ebc8377f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backGroundUI: {fileID: 898137696}
 --- !u!1001 &875347539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16330,7 +16351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd199ff2879d4147bcbedaef299e26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touchCars: {fileID: 506506796}
+  touchCars: {fileID: 0}
   anim: {fileID: 0}
   middleCarCollision: {fileID: 1103224819}
   carCanDrive: 0
@@ -16530,7 +16551,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1881179199}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 870781817}
+        m_TargetAssemblyTypeName: CanvasManager, Assembly-CSharp
+        m_MethodName: ClickOnPlayButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1881179199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17543,7 +17576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd199ff2879d4147bcbedaef299e26f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touchCars: {fileID: 506506796}
+  touchCars: {fileID: 0}
   anim: {fileID: 0}
   middleCarCollision: {fileID: 354761940}
   carCanDrive: 0
@@ -18733,6 +18766,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 506506797}
+  - {fileID: 870781816}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

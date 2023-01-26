@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RayManager : MonoBehaviour
 {
-
+    public static RayManager instance;
     //The raycast 
     [Header("The raycast")]
     public RaycastHit hitInfo;
@@ -20,8 +20,8 @@ public class RayManager : MonoBehaviour
 
     //Array of all the cars and finish line
     [Header("Finish line")]
+    public bool FinishTheStageBool;
     public int howManyCarsFinished;
-
     public int howManyCarsInScene;
     private GameObject[] allCarsInTheScene;
     private GameObject[] allCarsRightInTheScene;
@@ -31,6 +31,7 @@ public class RayManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         CheckHowManyCarsInTheScene();
     }
 
@@ -111,7 +112,7 @@ public class RayManager : MonoBehaviour
         if (howManyCarsFinished == howManyCarsInScene)
         {
             //end game card
-            Debug.Log("finish!");
+            FinishTheStageBool = true;
         }
     }
     void CheckHowManyCarsInTheScene()
