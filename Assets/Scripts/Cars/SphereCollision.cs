@@ -39,6 +39,11 @@ public class SphereCollision : MonoBehaviour
                 car.index = car.allPointsDistance.IndexOf(Mathf.Min(car.allPointsDistance.ToArray()));
                 //
                 noMoreCollision = false;
+
+                if (car.mouseTutorial != null)
+                {
+                    car.mouseTutorial.SetActive(false);
+                }
             }
         }
     }

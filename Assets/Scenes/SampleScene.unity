@@ -152,7 +152,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 471013923}
-  - {fileID: 693442193}
   m_Father: {fileID: 1118920976}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -924,6 +923,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 693442193}
   - {fileID: 1864907470}
   - {fileID: 1627195020}
   - {fileID: 1938441906}
@@ -6826,7 +6826,7 @@ GameObject:
   m_Component:
   - component: {fileID: 693442193}
   m_Layer: 0
-  m_Name: FirstTutorial (1)
+  m_Name: MousetTutorial (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6839,14 +6839,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693442192}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -1.8099046, y: 3.2960408, z: -2.4150884}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -166.97, y: -325.61, z: -7.8300004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1283802675}
-  m_Father: {fileID: 2207818}
-  m_RootOrder: 1
+  m_Father: {fileID: 98107803}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &699433598
 PrefabInstance:
@@ -14570,7 +14570,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14657,6 +14657,7 @@ MonoBehaviour:
   emote1: {fileID: 21300000, guid: d2a6659485b989147b60ecf3384201fd, type: 3}
   emote2: {fileID: 21300000, guid: 5b61e810929179240be5769d06c552d9, type: 3}
   emote3: {fileID: 21300000, guid: 1562029f870c2cf488f7fc9366b54b62, type: 3}
+  mouseTutorial: {fileID: 693442192}
 --- !u!64 &1627195018
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16736,7 +16737,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16853,6 +16854,7 @@ MonoBehaviour:
   emote1: {fileID: 21300000, guid: d2a6659485b989147b60ecf3384201fd, type: 3}
   emote2: {fileID: 21300000, guid: 5b61e810929179240be5769d06c552d9, type: 3}
   emote3: {fileID: 21300000, guid: 1562029f870c2cf488f7fc9366b54b62, type: 3}
+  mouseTutorial: {fileID: 693442192}
 --- !u!4 &1864907470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
@@ -17815,7 +17817,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17898,6 +17900,7 @@ MonoBehaviour:
   emote1: {fileID: 21300000, guid: d2a6659485b989147b60ecf3384201fd, type: 3}
   emote2: {fileID: 21300000, guid: 5b61e810929179240be5769d06c552d9, type: 3}
   emote3: {fileID: 21300000, guid: 1562029f870c2cf488f7fc9366b54b62, type: 3}
+  mouseTutorial: {fileID: 693442192}
 --- !u!64 &1938441904
 MeshCollider:
   m_ObjectHideFlags: 0

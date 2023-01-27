@@ -37,6 +37,9 @@ public class Cars : MonoBehaviour
     public Sprite emote2;
     public Sprite emote3;
 
+
+    public GameObject mouseTutorial;
+
    // private bool noMoreCollision = true;
 
     // Start is called before the first frame update
@@ -103,7 +106,7 @@ public class Cars : MonoBehaviour
 
     //Move the cars forward or backword
     void MoveCarsForward()
-    {
+    { 
         if (carCanDrive)
         {
             transform.position += transform.forward * speed * Time.deltaTime;
