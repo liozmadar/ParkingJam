@@ -25,7 +25,6 @@ public class SphereCollision : MonoBehaviour
         {
             if (other.gameObject.tag == "RoadPathPoint")
             {
-                Debug.Log("wall road");
                 car.carCanDrive = false;
                 car.carCanDriveBackward = false;
                 car.moveTheCar = true;
@@ -38,7 +37,6 @@ public class SphereCollision : MonoBehaviour
                 }
                 //index is the start point for the car to start the RoadPath from
                 car.index = car.allPointsDistance.IndexOf(Mathf.Min(car.allPointsDistance.ToArray()));
-                Debug.Log(car.index);
                 //
                 noMoreCollision = false;
             }

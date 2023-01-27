@@ -60,7 +60,7 @@ public class Gates : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Car" || other.gameObject.tag == "FirstCarTutorial")
+        if (other.gameObject.tag == "Car" || other.gameObject.tag == "CarRight" || other.gameObject.tag == "FirstCarTutorial")
         {
             stopGateDown = true;
         }
