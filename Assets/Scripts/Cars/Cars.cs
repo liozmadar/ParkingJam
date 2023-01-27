@@ -37,7 +37,7 @@ public class Cars : MonoBehaviour
     public Sprite emote2;
     public Sprite emote3;
 
-    private bool noMoreCollision = true;
+   // private bool noMoreCollision = true;
 
     // Start is called before the first frame update
     void Start()
@@ -123,28 +123,6 @@ public class Cars : MonoBehaviour
     //Road Path Follow
     private void OnTriggerEnter(Collider other)
     {
-        if (noMoreCollision)
-        {
-            if (other.gameObject.tag == "RoadPathPoint")
-            {
-                Debug.Log("wall road");
-                carCanDrive = false;
-                carCanDriveBackward = false;
-                moveTheCar = true;
-
-                //Check the distance between all road points
-                for (int i = 0; i < RoadPathFollow.instance.roadPathPoints.Length; i++)
-                {
-                    float dist = Vector3.Distance(RoadPathFollow.instance.roadPathPoints[i].transform.position, transform.position);
-                    allPointsDistance.Add(dist);
-                }
-                //index is the start point for the car to start the RoadPath from
-                index = allPointsDistance.IndexOf(Mathf.Min(allPointsDistance.ToArray()));
-                Debug.Log(index);
-                //
-            }
-            noMoreCollision = false;
-        }
         if (other.gameObject.tag == "FinishLine")
         {
             rayManager.howManyCarsFinished++;
