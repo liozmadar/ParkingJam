@@ -6,6 +6,7 @@ public class Cars : MonoBehaviour
 {
     [Header("Get scripts components")]
     public RayManager rayManager;
+    public Animator anim;
 
     [Header("Cars movement")]
     public bool carCanDrive;
@@ -46,6 +47,7 @@ public class Cars : MonoBehaviour
     void Start()
     {
         rayManager = GameObject.Find("GameCarsManager").GetComponent<RayManager>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -136,6 +138,7 @@ public class Cars : MonoBehaviour
     {
         if (moveTheCar)
         {
+            anim.enabled = false;
             if (index < RoadPathFollow.instance.roadPathPoints.Length)
             {
                 transform.position = Vector3.MoveTowards(transform.position, RoadPathFollow.instance.roadPathPoints[index].transform.position, carPointsSpeed);
@@ -159,6 +162,7 @@ public class Cars : MonoBehaviour
     {
         if (collision.gameObject.tag == "Car" || collision.gameObject.tag == "CarRight" || collision.gameObject.tag == "FirstCarTutorial" || collision.gameObject.tag == "ParkingObjects")
         {
+            anim.SetTrigger("GetHit");
             if (carCanDrive == true)
             {
                 carCanDrive = false;
