@@ -12986,7 +12986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_LocalRotation.y
@@ -12994,7 +12994,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13040,6 +13040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rayManager: {fileID: 0}
+  anim: {fileID: 0}
   carCanDrive: 0
   carCanDriveBackward: 0
   speed: 10
@@ -13099,7 +13100,7 @@ Animator:
   m_GameObject: {fileID: 1627195016}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8f4665f453411f34cacc156e29f2ed6f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5bf0c5e06ba38e44da55714377c3930e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -15880,7 +15881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_LocalRotation.y
@@ -15888,7 +15889,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7b04003b93f2a5d4da0790e94a453b96, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15930,6 +15931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rayManager: {fileID: 0}
+  anim: {fileID: 0}
   carCanDrive: 0
   carCanDriveBackward: 0
   speed: 10
@@ -15989,7 +15991,7 @@ Animator:
   m_GameObject: {fileID: 1938441902}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4e1abce861fb5b0459090e412c98e49b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 94d97a200013a5448bc85e35b62d9ce1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -17081,7 +17083,7 @@ Animator:
   m_GameObject: {fileID: 919132147663832984}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8f4665f453411f34cacc156e29f2ed6f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 223bc07fe5b21f8499411b15eeab897f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -17124,7 +17126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1671467702517323374, guid: 242373144fe2c42419b467ed650cbe26, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1671467702517323374, guid: 242373144fe2c42419b467ed650cbe26, type: 3}
       propertyPath: m_LocalRotation.y
@@ -17132,7 +17134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1671467702517323374, guid: 242373144fe2c42419b467ed650cbe26, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1671467702517323374, guid: 242373144fe2c42419b467ed650cbe26, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
