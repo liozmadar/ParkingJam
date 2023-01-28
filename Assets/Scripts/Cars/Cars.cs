@@ -37,11 +37,16 @@ public class Cars : MonoBehaviour
     public Sprite emote1;
     public Sprite emote2;
     public Sprite emote3;
+    //happy emotes
+    public Sprite emote4;
+    public Sprite emote5;
+    public Sprite emote6;
+    private bool makeHappyEmoteOnceBool;
 
 
     public GameObject mouseTutorial;
 
-   // private bool noMoreCollision = true;
+    // private bool noMoreCollision = true;
 
     // Start is called before the first frame update
     void Start()
@@ -67,6 +72,7 @@ public class Cars : MonoBehaviour
     //Show emotes when get hit
     void EmotesShow()
     {
+        //Sad emotes on get hit
         if (exclamationBool)
         {
             exclamation.SetActive(true);
@@ -78,6 +84,12 @@ public class Cars : MonoBehaviour
                 exclamation.SetActive(false);
             }
         }
+        //Happy emotes on finish
+        if (makeHappyEmoteOnceBool)
+        {
+            exclamation.SetActive(true);
+        }
+
         exclamation.transform.LookAt(Camera.main.transform.position);
     }
 
@@ -108,7 +120,7 @@ public class Cars : MonoBehaviour
 
     //Move the cars forward or backword
     void MoveCarsForward()
-    { 
+    {
         if (carCanDrive)
         {
             transform.position += transform.forward * speed * Time.deltaTime;
@@ -125,7 +137,7 @@ public class Cars : MonoBehaviour
     }
     //Till here
 
-    //Road Path Follow
+    //Trigger with the finish line and the gate of the finish line
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "FinishLine")
@@ -133,7 +145,16 @@ public class Cars : MonoBehaviour
             rayManager.howManyCarsFinished++;
             gameObject.SetActive(false);
         }
+        if (other.gameObject.tag == "Gate")
+        {
+            if (!makeHappyEmoteOnceBool)
+            {
+                HappyEmotesOnFinishCar();
+                makeHappyEmoteOnceBool = true;
+            }
+        }
     }
+    //Road Path Follow
     void FollowRoadPathPoints()
     {
         if (moveTheCar)
@@ -199,6 +220,25 @@ public class Cars : MonoBehaviour
                 exclamationTheCollisionCar = true;
             }
             //Till here
+        }
+    }
+
+    //Happy emotes random chosen when car finish
+    void HappyEmotesOnFinishCar()
+    {
+        makeHappyEmoteOnceBool = true;
+        float random = Random.Range(4, 7);
+        if (random == 4)
+        {
+            SP.sprite = emote4;
+        }
+        if (random == 5)
+        {
+            SP.sprite = emote5;
+        }
+        if (random == 6)
+        {
+            SP.sprite = emote6;
         }
     }
 }

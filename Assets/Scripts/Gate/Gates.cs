@@ -63,6 +63,7 @@ public class Gates : MonoBehaviour
         if (other.gameObject.tag == "Car" || other.gameObject.tag == "CarRight" || other.gameObject.tag == "FirstCarTutorial")
         {
             stopGateDown = true;
+            Debug.Log("Car Gate finish");
         }
     }
 }

@@ -13054,6 +13054,10 @@ MonoBehaviour:
   emote1: {fileID: 21300000, guid: d2a6659485b989147b60ecf3384201fd, type: 3}
   emote2: {fileID: 21300000, guid: 5b61e810929179240be5769d06c552d9, type: 3}
   emote3: {fileID: 21300000, guid: 1562029f870c2cf488f7fc9366b54b62, type: 3}
+  emote4: {fileID: 21300000, guid: d1fce6779dfb2024380b7553a1af6c6d, type: 3}
+  emote5: {fileID: 21300000, guid: adc2a212f262f7f419785e39a8695483, type: 3}
+  emote6: {fileID: 21300000, guid: f7f6fe537deb18541963cc534c603fdc, type: 3}
+  makeHappyEmoteBool: 0
   mouseTutorial: {fileID: 693442192}
 --- !u!64 &1627195018
 MeshCollider:
@@ -15945,6 +15949,10 @@ MonoBehaviour:
   emote1: {fileID: 21300000, guid: d2a6659485b989147b60ecf3384201fd, type: 3}
   emote2: {fileID: 21300000, guid: 5b61e810929179240be5769d06c552d9, type: 3}
   emote3: {fileID: 21300000, guid: 1562029f870c2cf488f7fc9366b54b62, type: 3}
+  emote4: {fileID: 21300000, guid: d1fce6779dfb2024380b7553a1af6c6d, type: 3}
+  emote5: {fileID: 21300000, guid: adc2a212f262f7f419785e39a8695483, type: 3}
+  emote6: {fileID: 21300000, guid: f7f6fe537deb18541963cc534c603fdc, type: 3}
+  makeHappyEmoteBool: 0
   mouseTutorial: {fileID: 693442192}
 --- !u!64 &1938441904
 MeshCollider:
@@ -16016,7 +16024,7 @@ GameObject:
   - component: {fileID: 1941921932}
   m_Layer: 0
   m_Name: GateIndecator
-  m_TagString: Untagged
+  m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17100,6 +17108,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 98107803}
     m_Modifications:
+    - target: {fileID: 1204860752300093825, guid: 242373144fe2c42419b467ed650cbe26, type: 3}
+      propertyPath: emote4
+      value: 
+      objectReference: {fileID: 21300000, guid: d1fce6779dfb2024380b7553a1af6c6d, type: 3}
+    - target: {fileID: 1204860752300093825, guid: 242373144fe2c42419b467ed650cbe26, type: 3}
+      propertyPath: emote5
+      value: 
+      objectReference: {fileID: 21300000, guid: adc2a212f262f7f419785e39a8695483, type: 3}
+    - target: {fileID: 1204860752300093825, guid: 242373144fe2c42419b467ed650cbe26, type: 3}
+      propertyPath: emote6
+      value: 
+      objectReference: {fileID: 21300000, guid: f7f6fe537deb18541963cc534c603fdc, type: 3}
     - target: {fileID: 1204860752300093825, guid: 242373144fe2c42419b467ed650cbe26, type: 3}
       propertyPath: mouseTutorial
       value: 
