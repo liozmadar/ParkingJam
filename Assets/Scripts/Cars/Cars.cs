@@ -227,6 +227,7 @@ public class Cars : MonoBehaviour
     void HappyEmotesOnFinishCar()
     {
         Character.instance.anim.SetTrigger("CarPass");
+       // Character.instance.anim.SetTrigger("HipHop");
         makeHappyEmoteOnceBool = true;
         float random = Random.Range(4, 7);
         if (random == 4)
