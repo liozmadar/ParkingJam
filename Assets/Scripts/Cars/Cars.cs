@@ -226,6 +226,7 @@ public class Cars : MonoBehaviour
     //Happy emotes random chosen when car finish
     void HappyEmotesOnFinishCar()
     {
+        Character.instance.anim.SetTrigger("CarPass");
         makeHappyEmoteOnceBool = true;
         float random = Random.Range(4, 7);
         if (random == 4)
