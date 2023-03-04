@@ -12,7 +12,7 @@ public class LevelsManager : MonoBehaviour
     void Start()
     {
         instance = this;
-        levelNumber = RayManager.instance.sceneLevel + 1;
+        levelNumber = RayManager.instance.sceneLevel;
     }
 
     // Update is called once per frame
