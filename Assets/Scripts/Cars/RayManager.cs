@@ -31,12 +31,13 @@ public class RayManager : MonoBehaviour
     public int sceneLevel;
     public bool sceneLevelBool;
 
+    public bool resetLevelsCount;
+
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
         CheckHowManyCarsInTheScene();
-       // PlayerPrefs.DeleteAll();
         sceneLevel = PlayerPrefs.GetInt("sceneLevel");
         Debug.Log(howManyCarsFinished);
         Debug.Log(howManyCarsInScene);
@@ -50,6 +51,11 @@ public class RayManager : MonoBehaviour
         if (!sceneLevelBool)
         {
             CarsFinished();
+        }
+
+        if (resetLevelsCount)
+        {
+            PlayerPrefs.DeleteAll();
         }
     }
     void RayCast()
