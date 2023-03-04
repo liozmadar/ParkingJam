@@ -30,6 +30,6 @@ public class CanvasManager : MonoBehaviour
     {
         RayManager.instance.FinishTheStageBool = false;
         backGroundUI.SetActive(false);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(RayManager.instance.sceneLevel);
     }
 }

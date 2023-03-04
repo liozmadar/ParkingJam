@@ -28,18 +28,29 @@ public class RayManager : MonoBehaviour
 
     public bool firstCarTutorial = true;
 
+    public int sceneLevel;
+    public bool sceneLevelBool;
+
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
         CheckHowManyCarsInTheScene();
+       // PlayerPrefs.DeleteAll();
+        sceneLevel = PlayerPrefs.GetInt("sceneLevel");
+        Debug.Log(howManyCarsFinished);
+        Debug.Log(howManyCarsInScene);
     }
 
     // Update is called once per frame
     void Update()
     {
         RayCast();
-        CarsFinished();
+
+        if (!sceneLevelBool)
+        {
+            CarsFinished();
+        }
     }
     void RayCast()
     {
@@ -108,11 +119,18 @@ public class RayManager : MonoBehaviour
     }
     void CarsFinished()
     {
-        //check if all the cars are get to the finish line
-        if (howManyCarsFinished == howManyCarsInScene)
+        if (!FinishTheStageBool)
         {
-            //end game card
-            FinishTheStageBool = true;
+            //check if all the cars are get to the finish line
+            if (howManyCarsFinished == howManyCarsInScene)
+            {
+                Debug.Log("hereooo");
+                //end game card
+                FinishTheStageBool = true;
+                sceneLevelBool = true;
+                sceneLevel++;
+                PlayerPrefs.SetInt("sceneLevel", sceneLevel);
+            }
         }
     }
     void CheckHowManyCarsInTheScene()
