@@ -18,7 +18,7 @@ public class CanvasManager : MonoBehaviour
     {
         instance = this;
         levelText = GameObject.Find("LevelText").GetComponent<TextMeshProUGUI>();
-        levelTextInt = RayManager.instance.sceneLevel + 1;
+        levelTextInt = RayManager.instance.sceneLevel;
         levelText.text = "Level - " + levelTextInt;
     }
 

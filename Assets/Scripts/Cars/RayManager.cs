@@ -28,7 +28,7 @@ public class RayManager : MonoBehaviour
 
     public bool firstCarTutorial = true;
 
-    public int sceneLevel;
+    public int sceneLevel = 1;
     public bool sceneLevelBool;
 
     public bool resetLevelsCount;
@@ -38,9 +38,11 @@ public class RayManager : MonoBehaviour
     {
         instance = this;
         CheckHowManyCarsInTheScene();
-        sceneLevel = PlayerPrefs.GetInt("sceneLevel");
-        Debug.Log(howManyCarsFinished);
-        Debug.Log(howManyCarsInScene);
+        if (PlayerPrefs.GetInt("sceneLevel") != 0)
+        {
+            sceneLevel = PlayerPrefs.GetInt("sceneLevel");
+            Debug.Log(sceneLevel);
+        }
     }
 
     // Update is called once per frame
@@ -130,7 +132,6 @@ public class RayManager : MonoBehaviour
             //check if all the cars are get to the finish line
             if (howManyCarsFinished == howManyCarsInScene)
             {
-                Debug.Log("hereooo");
                 //end game card
                 FinishTheStageBool = true;
                 sceneLevelBool = true;
