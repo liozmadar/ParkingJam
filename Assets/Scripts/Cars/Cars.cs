@@ -160,17 +160,17 @@ public class Cars : MonoBehaviour
         if (moveTheCar)
         {
             anim.enabled = false;
-            if (index < RoadPathFollow.instance.roadPathPoints.Length)
+            if (index < RoadPathFollow.instance.roadPathPoints2.Count)
             {
-                transform.position = Vector3.MoveTowards(transform.position, RoadPathFollow.instance.roadPathPoints[index].transform.position, carPointsSpeed * Time.deltaTime);
+                transform.position = Vector3.MoveTowards(transform.position, RoadPathFollow.instance.roadPathPoints2[index].transform.position, carPointsSpeed * Time.deltaTime);
                 //   transform.LookAt(RoadPathFollow.instance.roadPathPoints[middleCarCollision.index].transform.position);
 
-                if (Vector3.Distance(transform.position, RoadPathFollow.instance.roadPathPoints[index].transform.position) <= 0.1f)
+                if (Vector3.Distance(transform.position, RoadPathFollow.instance.roadPathPoints2[index].transform.position) <= 0.1f)
                 {
                     index++;
                 }
 
-                var targetRotation = Quaternion.LookRotation(RoadPathFollow.instance.roadPathPoints[index].transform.position - transform.position);
+                var targetRotation = Quaternion.LookRotation(RoadPathFollow.instance.roadPathPoints2[index].transform.position - transform.position);
 
                 // Smoothly rotate towards the target point.
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, angleSpeed * Time.deltaTime);
