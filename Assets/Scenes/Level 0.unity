@@ -17613,6 +17613,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 98107803}
     m_Modifications:
     - target: {fileID: 1204860752300093825, guid: 242373144fe2c42419b467ed650cbe26, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204860752300093825, guid: 242373144fe2c42419b467ed650cbe26, type: 3}
       propertyPath: mouseTutorial
       value: 
       objectReference: {fileID: 693442192}
@@ -17678,6 +17682,10 @@ PrefabInstance:
       value: car-hatchback-violet (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1880385648750778947, guid: b60cb9c0f3687aa48a5613c391f783db, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880385648750778947, guid: b60cb9c0f3687aa48a5613c391f783db, type: 3}
       propertyPath: mouseTutorial
       value: 
       objectReference: {fileID: 693442192}
@@ -17734,6 +17742,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 98107803}
     m_Modifications:
+    - target: {fileID: 4786778266897387062, guid: 54ca69dfb57712d48a951cdd70044282, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4786778266897387062, guid: 54ca69dfb57712d48a951cdd70044282, type: 3}
       propertyPath: mouseTutorial
       value: 
