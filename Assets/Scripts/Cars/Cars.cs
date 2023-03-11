@@ -162,7 +162,7 @@ public class Cars : MonoBehaviour
             anim.enabled = false;
             if (index < RoadPathFollow.instance.roadPathPoints.Length)
             {
-                transform.position = Vector3.MoveTowards(transform.position, RoadPathFollow.instance.roadPathPoints[index].transform.position, carPointsSpeed);
+                transform.position = Vector3.MoveTowards(transform.position, RoadPathFollow.instance.roadPathPoints[index].transform.position, carPointsSpeed * Time.deltaTime);
                 //   transform.LookAt(RoadPathFollow.instance.roadPathPoints[middleCarCollision.index].transform.position);
 
                 if (Vector3.Distance(transform.position, RoadPathFollow.instance.roadPathPoints[index].transform.position) <= 0.1f)

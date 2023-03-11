@@ -2209,6 +2209,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 98107803}
     m_Modifications:
+    - target: {fileID: 204354159743730932, guid: 23ebc2236b57f0c4e8675c49545e84c7, type: 3}
+      propertyPath: carPointsSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 386388709607170833, guid: 23ebc2236b57f0c4e8675c49545e84c7, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -11059,6 +11063,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2708622414185199625, guid: 68e4f085d47293740a3b1239cf73ecce, type: 3}
+      propertyPath: carPointsSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2979021674657498454, guid: 68e4f085d47293740a3b1239cf73ecce, type: 3}
       propertyPath: m_Name
       value: CarUp2
@@ -15595,6 +15603,10 @@ PrefabInstance:
     - target: {fileID: 626966719026206842, guid: 5248bd6f54074cc4abc19a1c4f00c6b6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097145022466359199, guid: 5248bd6f54074cc4abc19a1c4f00c6b6, type: 3}
+      propertyPath: carPointsSpeed
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5248bd6f54074cc4abc19a1c4f00c6b6, type: 3}

@@ -17458,6 +17458,10 @@ PrefabInstance:
       propertyPath: mouseTutorial
       value: 
       objectReference: {fileID: 693442192}
+    - target: {fileID: 1204860752300093825, guid: 242373144fe2c42419b467ed650cbe26, type: 3}
+      propertyPath: carPointsSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1671467702517323374, guid: 242373144fe2c42419b467ed650cbe26, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -17531,6 +17535,10 @@ PrefabInstance:
       propertyPath: mouseTutorial
       value: 
       objectReference: {fileID: 693442192}
+    - target: {fileID: 1880385648750778947, guid: b60cb9c0f3687aa48a5613c391f783db, type: 3}
+      propertyPath: carPointsSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1880385648750778951, guid: b60cb9c0f3687aa48a5613c391f783db, type: 3}
       propertyPath: m_Controller
       value: 
@@ -17596,6 +17604,10 @@ PrefabInstance:
       propertyPath: mouseTutorial
       value: 
       objectReference: {fileID: 693442192}
+    - target: {fileID: 4786778266897387062, guid: 54ca69dfb57712d48a951cdd70044282, type: 3}
+      propertyPath: carPointsSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5036348219396188639, guid: 54ca69dfb57712d48a951cdd70044282, type: 3}
       propertyPath: m_RootOrder
       value: 3

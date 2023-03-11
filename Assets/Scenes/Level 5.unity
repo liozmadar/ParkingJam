@@ -9292,6 +9292,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 98107803}
     m_Modifications:
+    - target: {fileID: 4762433653248052077, guid: 80a8b0bf8245c3c4fb2ec0b95b980ebd, type: 3}
+      propertyPath: carPointsSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5016210990623763592, guid: 80a8b0bf8245c3c4fb2ec0b95b980ebd, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -9760,6 +9764,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 98107803}
     m_Modifications:
+    - target: {fileID: 1378159097474332174, guid: b628ef489bb058248ab0130418daf9e9, type: 3}
+      propertyPath: carPointsSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1489157764345450987, guid: b628ef489bb058248ab0130418daf9e9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -16130,6 +16138,10 @@ PrefabInstance:
     - target: {fileID: 4991956053871452690, guid: 470653a17aa10b245a9ab5a2ccbbabd9, type: 3}
       propertyPath: m_Name
       value: CarDown2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298366510586355533, guid: 470653a17aa10b245a9ab5a2ccbbabd9, type: 3}
+      propertyPath: carPointsSpeed
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5624201234772539560, guid: 470653a17aa10b245a9ab5a2ccbbabd9, type: 3}
       propertyPath: m_RootOrder

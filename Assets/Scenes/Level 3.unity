@@ -15470,6 +15470,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1097145022466359199, guid: 5248bd6f54074cc4abc19a1c4f00c6b6, type: 3}
+      propertyPath: carPointsSpeed
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5248bd6f54074cc4abc19a1c4f00c6b6, type: 3}
 --- !u!4 &1858044598 stripped
@@ -17586,6 +17590,10 @@ PrefabInstance:
       propertyPath: mouseTutorial
       value: 
       objectReference: {fileID: 693442192}
+    - target: {fileID: 1204860752300093825, guid: 242373144fe2c42419b467ed650cbe26, type: 3}
+      propertyPath: carPointsSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1671467702517323374, guid: 242373144fe2c42419b467ed650cbe26, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -17659,6 +17667,10 @@ PrefabInstance:
       propertyPath: mouseTutorial
       value: 
       objectReference: {fileID: 693442192}
+    - target: {fileID: 1880385648750778947, guid: b60cb9c0f3687aa48a5613c391f783db, type: 3}
+      propertyPath: carPointsSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1880385648750778951, guid: b60cb9c0f3687aa48a5613c391f783db, type: 3}
       propertyPath: m_Controller
       value: 

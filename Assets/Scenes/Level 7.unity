@@ -5734,6 +5734,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 881791233381391195, guid: 9009cd5e250491646a19f5460c3ebdf0, type: 3}
+      propertyPath: carPointsSpeed
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9009cd5e250491646a19f5460c3ebdf0, type: 3}
 --- !u!4 &631974002 stripped
@@ -9283,6 +9287,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 98107803}
     m_Modifications:
+    - target: {fileID: 4762433653248052077, guid: 80a8b0bf8245c3c4fb2ec0b95b980ebd, type: 3}
+      propertyPath: carPointsSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5016210990623763592, guid: 80a8b0bf8245c3c4fb2ec0b95b980ebd, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -13490,6 +13498,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7433623942979387315, guid: cfcc9f7efee144b40b4d4a3816863815, type: 3}
+      propertyPath: carPointsSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7775711350978953964, guid: cfcc9f7efee144b40b4d4a3816863815, type: 3}
       propertyPath: m_Name
       value: CarDown
@@ -15987,6 +15999,10 @@ PrefabInstance:
     - target: {fileID: 4991956053871452690, guid: 470653a17aa10b245a9ab5a2ccbbabd9, type: 3}
       propertyPath: m_Name
       value: CarDown2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5298366510586355533, guid: 470653a17aa10b245a9ab5a2ccbbabd9, type: 3}
+      propertyPath: carPointsSpeed
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5624201234772539560, guid: 470653a17aa10b245a9ab5a2ccbbabd9, type: 3}
       propertyPath: m_RootOrder
