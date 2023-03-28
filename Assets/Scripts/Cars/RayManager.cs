@@ -41,7 +41,6 @@ public class RayManager : MonoBehaviour
         if (PlayerPrefs.GetInt("sceneLevel") != 0)
         {
             sceneLevel = PlayerPrefs.GetInt("sceneLevel");
-            Debug.Log(sceneLevel);
         }
     }
 

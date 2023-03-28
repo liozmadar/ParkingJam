@@ -50,7 +50,7 @@ public class SphereCollision : MonoBehaviour
                 //till here
 
                 car.index = other.GetComponent<RoadPoint>().pointNumber;
-                Debug.Log(car.index);
+
                 if (car.mouseTutorial != null)
                 {
                     car.mouseTutorial.SetActive(false);

@@ -44,5 +44,6 @@ public class CanvasManager : MonoBehaviour
     public void ResetLevelsCountButton()
     {
         PlayerPrefs.DeleteKey("sceneLevel");
+        SceneManager.LoadScene(0);
     }
 }
