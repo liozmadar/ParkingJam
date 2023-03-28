@@ -13,6 +13,7 @@ public class CanvasManager : MonoBehaviour
     public TextMeshProUGUI levelText;
     public int levelTextInt;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,7 @@ public class CanvasManager : MonoBehaviour
         levelTextInt = RayManager.instance.sceneLevel;
         levelText.text = "Level - " + levelTextInt;
     }
-
+   
     // Update is called once per frame
     void Update()
     {
@@ -39,5 +40,9 @@ public class CanvasManager : MonoBehaviour
         RayManager.instance.FinishTheStageBool = false;
         backGroundUI.SetActive(false);
         SceneManager.LoadScene(RayManager.instance.sceneLevel);
+    }
+    public void ResetLevelsCountButton()
+    {
+        PlayerPrefs.DeleteKey("sceneLevel");
     }
 }

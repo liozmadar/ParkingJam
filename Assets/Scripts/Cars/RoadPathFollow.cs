@@ -21,13 +21,13 @@ public class RoadPathFollow : MonoBehaviour
 
         roadPathPoints = GameObject.FindGameObjectsWithTag("RoadPathPoint");
 
-        // Debug.Log(transform.childCount);
+        UpdatePointsNumber();
     }
 
     // Update is called once per frame
     void Update()
     {
-        AddRoadPointsToTheList();
+       // AddRoadPointsToTheList();
     }
     void AddRoadPointsToTheList()
     {
@@ -36,6 +36,13 @@ public class RoadPathFollow : MonoBehaviour
             firstChild = this.gameObject.transform.GetChild(ChildsCount).gameObject;
             ChildsCount++;
             roadPathPoints2.Add(firstChild);
+        }
+    }
+    void UpdatePointsNumber()
+    {
+        for (int i = 0; i < roadPathPoints.Length; i++)
+        {
+            roadPathPoints[i].GetComponent<RoadPoint>().pointNumber = i;
         }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SphereCollision : MonoBehaviour
 {
@@ -30,16 +31,26 @@ public class SphereCollision : MonoBehaviour
                 car.moveTheCar = true;
 
                 //Check the distance between all road points
-                for (int i = 0; i < RoadPathFollow.instance.roadPathPoints.Length; i++)
-                {
-                    float dist = Vector3.Distance(RoadPathFollow.instance.roadPathPoints[i].transform.position, transform.position);
-                    car.allPointsDistance.Add(dist);
-                }
-                //index is the start point for the car to start the RoadPath from
-                car.index = car.allPointsDistance.IndexOf(Mathf.Min(car.allPointsDistance.ToArray()));
-                //
-                noMoreCollision = false;
 
+                //from here
+                /*   for (int i = 0; i < RoadPathFollow.instance.roadPathPoints.Length; i++)
+                   {
+                       float dist = Vector3.Distance(RoadPathFollow.instance.roadPathPoints[i].transform.position, transform.position);
+                       car.allPointsDistance.Add(dist);
+                   }
+                   //index is the start point for the car to start the RoadPath from
+                   car.index = car.allPointsDistance.IndexOf(Mathf.Min(car.allPointsDistance.ToArray()));
+                   //
+                   noMoreCollision = false;
+
+                   if (car.mouseTutorial != null)
+                   {
+                       car.mouseTutorial.SetActive(false);
+                   }*/
+                //till here
+
+                car.index = other.GetComponent<RoadPoint>().pointNumber;
+                Debug.Log(car.index);
                 if (car.mouseTutorial != null)
                 {
                     car.mouseTutorial.SetActive(false);

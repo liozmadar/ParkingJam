@@ -1842,6 +1842,7 @@ GameObject:
   - component: {fileID: 200991407}
   - component: {fileID: 200991406}
   - component: {fileID: 200991405}
+  - component: {fileID: 200991408}
   m_Layer: 0
   m_Name: Points (13)
   m_TagString: RoadPathPoint
@@ -1927,6 +1928,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200991403}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &200991408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200991403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e27e46455b2f649930c23a50e72ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointNumber: 0
 --- !u!1 &211211666
 GameObject:
   m_ObjectHideFlags: 0
@@ -4084,6 +4098,7 @@ GameObject:
   - component: {fileID: 479686085}
   - component: {fileID: 479686084}
   - component: {fileID: 479686083}
+  - component: {fileID: 479686086}
   m_Layer: 0
   m_Name: Points (9)
   m_TagString: RoadPathPoint
@@ -4169,6 +4184,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479686081}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &479686086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479686081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e27e46455b2f649930c23a50e72ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointNumber: 0
 --- !u!1001 &481122737
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4592,6 +4620,7 @@ GameObject:
   - component: {fileID: 513572327}
   - component: {fileID: 513572326}
   - component: {fileID: 513572325}
+  - component: {fileID: 513572328}
   m_Layer: 0
   m_Name: Points (10)
   m_TagString: RoadPathPoint
@@ -4677,6 +4706,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 513572323}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &513572328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513572323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e27e46455b2f649930c23a50e72ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointNumber: 0
 --- !u!1001 &523560156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5266,6 +5308,7 @@ GameObject:
   - component: {fileID: 639809456}
   - component: {fileID: 639809455}
   - component: {fileID: 639809454}
+  - component: {fileID: 639809457}
   m_Layer: 0
   m_Name: Points (11)
   m_TagString: RoadPathPoint
@@ -5351,6 +5394,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639809452}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &639809457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639809452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e27e46455b2f649930c23a50e72ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointNumber: 0
 --- !u!1001 &651133316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5765,6 +5821,7 @@ GameObject:
   - component: {fileID: 693120845}
   - component: {fileID: 693120844}
   - component: {fileID: 693120843}
+  - component: {fileID: 693120846}
   m_Layer: 0
   m_Name: Points (5)
   m_TagString: RoadPathPoint
@@ -5850,6 +5907,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693120841}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &693120846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693120841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e27e46455b2f649930c23a50e72ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointNumber: 0
 --- !u!1 &693442192
 GameObject:
   m_ObjectHideFlags: 0
@@ -8015,6 +8085,7 @@ GameObject:
   - component: {fileID: 970524721}
   - component: {fileID: 970524720}
   - component: {fileID: 970524719}
+  - component: {fileID: 970524722}
   m_Layer: 0
   m_Name: Points (6)
   m_TagString: RoadPathPoint
@@ -8100,6 +8171,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970524717}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &970524722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970524717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e27e46455b2f649930c23a50e72ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointNumber: 0
 --- !u!1001 &982863071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9319,6 +9403,7 @@ GameObject:
   - component: {fileID: 1144582230}
   - component: {fileID: 1144582229}
   - component: {fileID: 1144582228}
+  - component: {fileID: 1144582231}
   m_Layer: 0
   m_Name: Points (3)
   m_TagString: RoadPathPoint
@@ -9404,6 +9489,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144582226}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1144582231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144582226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e27e46455b2f649930c23a50e72ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointNumber: 0
 --- !u!1001 &1146770077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10986,6 +11084,7 @@ GameObject:
   - component: {fileID: 1323195611}
   - component: {fileID: 1323195610}
   - component: {fileID: 1323195609}
+  - component: {fileID: 1323195612}
   m_Layer: 0
   m_Name: Points (7)
   m_TagString: RoadPathPoint
@@ -11071,6 +11170,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323195607}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1323195612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323195607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e27e46455b2f649930c23a50e72ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointNumber: 0
 --- !u!1 &1332639244
 GameObject:
   m_ObjectHideFlags: 0
@@ -11083,6 +11195,7 @@ GameObject:
   - component: {fileID: 1332639248}
   - component: {fileID: 1332639247}
   - component: {fileID: 1332639246}
+  - component: {fileID: 1332639249}
   m_Layer: 0
   m_Name: Points (8)
   m_TagString: RoadPathPoint
@@ -11168,6 +11281,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332639244}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1332639249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332639244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e27e46455b2f649930c23a50e72ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointNumber: 0
 --- !u!1001 &1336419469
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11504,6 +11630,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roadPathPoints: []
+  roadPathPoints2: []
+  firstChild: {fileID: 0}
+  ChildsCount: 0
 --- !u!1001 &1388857455
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11852,6 +11981,7 @@ GameObject:
   - component: {fileID: 1424102461}
   - component: {fileID: 1424102460}
   - component: {fileID: 1424102459}
+  - component: {fileID: 1424102462}
   m_Layer: 0
   m_Name: Points
   m_TagString: RoadPathPoint
@@ -11937,6 +12067,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424102457}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1424102462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424102457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e27e46455b2f649930c23a50e72ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointNumber: 0
 --- !u!1001 &1458370153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13722,6 +13865,7 @@ GameObject:
   - component: {fileID: 1732513344}
   - component: {fileID: 1732513343}
   - component: {fileID: 1732513342}
+  - component: {fileID: 1732513345}
   m_Layer: 0
   m_Name: Points (12)
   m_TagString: RoadPathPoint
@@ -13807,6 +13951,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1732513340}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1732513345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732513340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e27e46455b2f649930c23a50e72ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointNumber: 0
 --- !u!1001 &1733696242
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15233,6 +15390,7 @@ GameObject:
   - component: {fileID: 1855586904}
   - component: {fileID: 1855586903}
   - component: {fileID: 1855586902}
+  - component: {fileID: 1855586905}
   m_Layer: 0
   m_Name: Points (4)
   m_TagString: RoadPathPoint
@@ -15318,6 +15476,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855586900}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1855586905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855586900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e27e46455b2f649930c23a50e72ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointNumber: 0
 --- !u!1 &1856706001
 GameObject:
   m_ObjectHideFlags: 0
@@ -15330,6 +15501,7 @@ GameObject:
   - component: {fileID: 1856706005}
   - component: {fileID: 1856706004}
   - component: {fileID: 1856706003}
+  - component: {fileID: 1856706006}
   m_Layer: 0
   m_Name: Points (2)
   m_TagString: RoadPathPoint
@@ -15415,6 +15587,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856706001}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1856706006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856706001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e27e46455b2f649930c23a50e72ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointNumber: 0
 --- !u!1001 &1858044597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17190,6 +17375,7 @@ GameObject:
   - component: {fileID: 2121120139}
   - component: {fileID: 2121120138}
   - component: {fileID: 2121120137}
+  - component: {fileID: 2121120140}
   m_Layer: 0
   m_Name: Points (1)
   m_TagString: RoadPathPoint
@@ -17275,6 +17461,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121120135}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2121120140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2121120135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e27e46455b2f649930c23a50e72ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointNumber: 0
 --- !u!1001 &2123945515
 PrefabInstance:
   m_ObjectHideFlags: 0
