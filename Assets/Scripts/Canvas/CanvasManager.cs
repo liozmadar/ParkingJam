@@ -13,6 +13,7 @@ public class CanvasManager : MonoBehaviour
     public TextMeshProUGUI levelText;
     public int levelTextInt;
 
+    public GameObject resetButton;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,17 @@ public class CanvasManager : MonoBehaviour
         RayManager.instance.FinishTheStageBool = false;
         backGroundUI.SetActive(false);
         SceneManager.LoadScene(RayManager.instance.sceneLevel);
+    }
+    public void ToggleResetButton()
+    {
+        if (resetButton.activeSelf == isActiveAndEnabled)
+        {
+            resetButton.SetActive(false);
+        }
+        else
+        {
+            resetButton.SetActive(true);
+        }
     }
     public void ResetLevelsCountButton()
     {
