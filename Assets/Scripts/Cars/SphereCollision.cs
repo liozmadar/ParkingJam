@@ -9,6 +9,10 @@ public class SphereCollision : MonoBehaviour
     public bool noMoreCollision = true;
     public Cars car;
 
+    public TextMeshProUGUI text;
+
+    private bool roadPointsFirstCollision = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,12 +53,18 @@ public class SphereCollision : MonoBehaviour
                    }*/
                 //till here
 
-                car.index = other.GetComponent<RoadPoint>().pointNumber;
+                if (roadPointsFirstCollision)
+                {
+                    car.index = other.GetComponent<RoadPoint>().pointNumber;
+                    roadPointsFirstCollision = false;
+                   // text.text = other.GetComponent<RoadPoint>().pointNumber.ToString();
+                }
 
                 if (car.mouseTutorial != null)
                 {
                     car.mouseTutorial.SetActive(false);
                 }
+
             }
         }
     }
