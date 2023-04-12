@@ -2015,7 +2015,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 563154952829014791, guid: fd7f30ba002a7644d804b13de6181826, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.4
+      value: -1.156
       objectReference: {fileID: 0}
     - target: {fileID: 563154952829014791, guid: fd7f30ba002a7644d804b13de6181826, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2023,7 +2023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 563154952829014791, guid: fd7f30ba002a7644d804b13de6181826, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.88
+      value: -2.029
       objectReference: {fileID: 0}
     - target: {fileID: 563154952829014791, guid: fd7f30ba002a7644d804b13de6181826, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6799,7 +6799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 563154952829014791, guid: fd7f30ba002a7644d804b13de6181826, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.718
+      value: -3.201
       objectReference: {fileID: 0}
     - target: {fileID: 563154952829014791, guid: fd7f30ba002a7644d804b13de6181826, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6807,7 +6807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 563154952829014791, guid: fd7f30ba002a7644d804b13de6181826, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.817
+      value: -5.704
       objectReference: {fileID: 0}
     - target: {fileID: 563154952829014791, guid: fd7f30ba002a7644d804b13de6181826, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7984,6 +7984,7 @@ MonoBehaviour:
   backGroundUI: {fileID: 898137696}
   levelText: {fileID: 0}
   levelTextInt: 0
+  resetButton: {fileID: 0}
 --- !u!1001 &875347539
 PrefabInstance:
   m_ObjectHideFlags: 0
