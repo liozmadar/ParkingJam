@@ -22,6 +22,9 @@ public class LevelsManager : MonoBehaviour
     }
     public void LoadLevel()
     {
-        SceneManager.LoadScene(levelNumber);
+        if (!CanvasManager.instance.enablePlayButton)
+        {
+            SceneManager.LoadScene(levelNumber);
+        }
     }
 }

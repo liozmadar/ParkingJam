@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class CanvasManager : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class CanvasManager : MonoBehaviour
 
     public GameObject resetButton;
 
+    public GameObject playButton;
+    public bool enablePlayButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +27,16 @@ public class CanvasManager : MonoBehaviour
         levelTextInt = RayManager.instance.sceneLevel;
         levelText.text = "Level - " + levelTextInt;
     }
-   
+
     // Update is called once per frame
     void Update()
     {
         ToggleBackGroundUI();
+
+        if (levelTextInt + 1 >= SceneManager.sceneCountInBuildSettings)
+        {
+            GetThePlayButtonComponent();
+        }
     }
     void ToggleBackGroundUI()
     {
@@ -38,9 +47,12 @@ public class CanvasManager : MonoBehaviour
     }
     public void ClickOnPlayButton()
     {
-        RayManager.instance.FinishTheStageBool = false;
-        backGroundUI.SetActive(false);
-        SceneManager.LoadScene(RayManager.instance.sceneLevel);
+        if (!enablePlayButton)
+        {
+            RayManager.instance.FinishTheStageBool = false;
+            backGroundUI.SetActive(false);
+            SceneManager.LoadScene(RayManager.instance.sceneLevel);
+        }
     }
     public void ToggleResetButton()
     {
@@ -57,5 +69,14 @@ public class CanvasManager : MonoBehaviour
     {
         PlayerPrefs.DeleteKey("sceneLevel");
         SceneManager.LoadScene(0);
+    }
+    private void GetThePlayButtonComponent()
+    {
+        playButton = GameObject.Find("PlayButtonText");
+        if (playButton == isActiveAndEnabled)
+        {
+            playButton.GetComponent<TextMeshProUGUI>().text = "New Levels coming soon!";
+            enablePlayButton = true;
+        }
     }
 }

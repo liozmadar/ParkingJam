@@ -7529,7 +7529,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 50}
+  m_SizeDelta: {x: 550, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &867808200
 MonoBehaviour:
@@ -7759,6 +7759,7 @@ MonoBehaviour:
   levelText: {fileID: 0}
   levelTextInt: 0
   resetButton: {fileID: 1460485265}
+  playButton: {fileID: 0}
 --- !u!114 &870781818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16137,7 +16138,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -250}
-  m_SizeDelta: {x: 500, y: 150}
+  m_SizeDelta: {x: 550, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1881179198
 MonoBehaviour:
